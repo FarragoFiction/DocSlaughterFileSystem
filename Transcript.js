@@ -65,6 +65,7 @@ class TranscriptEngine {
         const scanline = createElementWithIdAndParent("div", crt, undefined, "scanline")
         const lines = createElementWithIdAndParent("div", crt, undefined, "lines")
         const terminal = createElementWithIdAndParent("div", crt, "terminal")
+        const ls = createElementWithIdAndParent("div", terminal, "ls");
         this.parent.append(crt);
     }
 
@@ -83,6 +84,11 @@ class TranscriptEngine {
             return;
         }
         terminal.innerHTML = "";
+
+        const element = document.createElement("div");
+        terminal.append(element);
+        element.innerHTML ="$ ls"
+        this.clickAudio.play();
         for (let line of lines) {
             if (line.trim() !== "") {
                 const element = document.createElement("a");
