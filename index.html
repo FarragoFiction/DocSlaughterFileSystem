@@ -1,0 +1,47 @@
+<html>
+
+<head>
+  <title>USER: DOC SLAUGHTER</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" href="alt.ico" />
+  <script src ="transcript.js"></script>
+  <script>
+    const play = ()=>{
+
+      const text = `
+      ATranscript
+      ASecondTranscript
+      AThirdTranscript
+      D.Log
+      ACensoredTranscript
+      APersonalTranscript
+      ASecondPersonalTranscript
+      ADescendingTranscript
+      ADrinkingTranscript
+      AKTranscript
+      ATrainingTranscript
+      ABulletproofTranscript
+      ADepressingTranscript
+      AKillingTranscript
+      AMonstrousTranscript
+      `;
+
+
+      const target = document.querySelector("body");
+      target.innerHTML = "";
+      const te = new TranscriptEngine(text, target);
+      te.play();
+    }
+  </script>
+
+  
+
+
+</head>
+
+<body><p style="display: none;">JR here. Doc wouldn't hide things, ofc. You get what the missing files are saying, right?</p></body>
+<button onClick="play()">Click To Wake Up</button>
+
+</body>
+
+</html>
